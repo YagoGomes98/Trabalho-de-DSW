@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registro de mercadorias:</title>
+    </head>
+    <body> 
+        <form  action="salvar.php" method="GET" enctype="multipart/form-data" >
+           
+            Nome: <input type="text" name="txtNome" id="txtNome" 
+                         required maxlength="50" />   <br>
+            <label for="txtPreco">Preço:</label>
+            <input type="number" name="txtPreco" step="any" 
+                   min="1" max="1000000"  /> <br>
+            <label for="txtQuantidade">Quantidade:</label>
+            <input type="number" name="txtQuantidade" 
+                   min="1" max="10000000" />  <br>
+            <div style="width: 250px; height: 20px; background: lightgrey;" >
+                <style>
+                    div{
+                        border: solid 2px black;
+                        border-top: solid 2px black;
+                        border-radius: 0px;
+                    }
+                </style>         
+            <label for="txtDataValidade">Data de validade:</label>
+            <input type="date" name="txtDataValidade" 
+            min="2020-04-20" max="2020-04-27" 
+                   /> </div> <br>
+            
+           
+            
+            <label for="categoria">Categoria:</label>
+            <select name="categoria">
+                <option value="0">Selecione...</option>
+                <optgroup label="Destino">
+                <option value="1">Carnes</option>    
+                <option value="2">Vinhos</option> 
+                <option value="3">Pães</option> 
+                </optgroup>
+
+                <optgroup label="Rotina">
+                    <option value="4">Arroz</option> 
+                    <option value="5">Massas</option>
+                    </optgroup> 
+                    
+                <optgroup label="Ocasionais">
+                    <option value="6">Ovos de páscoa</option>
+                    <option value="7">Panetones</option>
+                    </optgroup> 
+                
+                <optgroup label="Conveniência">
+                    <option value="8">Comidas congeladas</option> 
+                    <option value="9">Bebidas</option> 
+                    <option value="10">Salgadinhos</option> 
+                    <option value="11">Doces</option>
+                </optgroup>    
+            
+            </select>  <br> 
+            
+            <label for="Foto">Foto: </label>
+            <input type="image" /> <br>        
+            <label for="Foto"> </label>
+            <input type="file" name="foto" /> </div> <br>
+            
+            <label for="obs">Obs: </label> <br>
+            <textarea name="obs" rows="10" cols="15"></textarea> <br>
+            
+          
+            
+            <input type="submit" value="Salvar" />
+            <input type="reset" value="Limpar" />
+            
+        </form>
+     
+    </body>
+</html>
+
+
+
+
